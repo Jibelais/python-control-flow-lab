@@ -1,114 +1,126 @@
-# exercise-01 Vowel or Consonant
+# # exercise-01 Vowel or Consonant
 
-# Write the code that:
-# 1. Prompts the user to enter a letter in the alphabet:
-#      Please enter a letter from the alphabet (a-z or A-Z):
-# 2. Write the code that determines whether the letter entered is a vowel
-# 3. Print one of following messages (substituting the letter for x):
-#      - The letter x is a vowel
-#      - The letter x is a consonant
-# Hints:  Use the in operator to check if a character is in another string
-#         For example, if some_char in 'abc':
+# # Write the code that:
+# # 1. Prompts the user to enter a letter in the alphabet:
+# #      Please enter a letter from the alphabet (a-z or A-Z):
+# # 2. Write the code that determines whether the letter entered is a vowel
+# # 3. Print one of following messages (substituting the letter for x):
+# #      - The letter x is a vowel
+# #      - The letter x is a consonant
+# # Hints:  Use the in operator to check if a character is in another string
+# #         For example, if some_char in 'abc':
+
+# # char = input('Please enter a letter from the alphabet (a-z or A-z):').lower()
+# # if char in ("a", "e", "i", "o" , "u"):
+# #      print (f'The letter {char} is a vowl')
+# # else: 
+# #     print (f'The letter {char} is a consonant')
 
 # char = input('Please enter a letter from the alphabet (a-z or A-z):').lower()
-# if char in ("a", "e", "i", "o" , "u"):
-#      print (f'The letter {char} is a vowl')
-# else: 
+
+# if char in "aeiou": 
+#     print (f'The letter {char} is a vowl')
+# elif char in "bcdfghjklmnpqrstvwxyz":
 #     print (f'The letter {char} is a consonant')
-
-char = input('Please enter a letter from the alphabet (a-z or A-z):').lower()
-vowels = "aeiou"
-consonants = "bcdfghjklmnpqrstvwxyz"
-
-if char in vowels: 
-    print (f'The letter {char} is a vowl')
-elif char in consonants: 
-    print (f'The letter {char} is a consonant')
+# else: 
+#     print('Invalid character')
 
 
 
-# exercise-02 Length of Phrase
+# # exercise-02 Length of Phrase
 
-# Write the code that:
-# 1. Prompts the user to enter a phrase:
-#      Please enter a word or phrase:
-# 2. Print the following message:
-#      - What you entered is xx characters long
-# 3. Return to step 1, unless the word 'quit' was entered.
+# # Write the code that:
+# # 1. Prompts the user to enter a phrase:
+# #      Please enter a word or phrase:
+# # 2. Print the following message:
+# #      - What you entered is xx characters long
+# # 3. Return to step 1, unless the word 'quit' was entered.
 
-phrase = ''
-while phrase != 'quit':
-    phrase = input('Please enter a word or phrase:')
-    print(f'what you entered is {len(phrase)} characters long')
-    if phrase == 'quit':
-        print ("quiting...")
-
-
-# exercise-03 Calculate Dog Years
-
-# Write the code that:
-# 1. Prompts the user to enter a dog's age in human years like this:
-#      Input a dog's age in human years:
-# 2. Calculates the equivalent dog years, where:
-#      - The first two years count as 10 years each
-#      - Any remaining years count as 7 years each
-# 3. Prints the answer in the following format:
-#      The dog's age in dog years is xx
-# Hint:  Use the int() function to convert the string returned from input() into an integer
+# phrase = ''
+# while phrase != 'quit':
+#     phrase = input('Please enter a word or phrase:')
+#     print(f'what you entered is {len(phrase)} characters long')
+#     if phrase == 'quit':
+#         print ("quiting...")
 
 
-age = int(input("Input a dog's in human years:"))
+# # exercise-03 Calculate Dog Years
 
-if age <= 2: 
-    dog_age = age * 10
-else:
-    dog_age = ((age -2) * 7) + 20
+# # Write the code that:
+# # 1. Prompts the user to enter a dog's age in human years like this:
+# #      Input a dog's age in human years:
+# # 2. Calculates the equivalent dog years, where:
+# #      - The first two years count as 10 years each
+# #      - Any remaining years count as 7 years each
+# # 3. Prints the answer in the following format:
+# #      The dog's age in dog years is xx
+# # Hint:  Use the int() function to convert the string returned from input() into an integer
 
-print (f"Dog is {dog_age} years old")
 
-# exercise-04 What kind of Triangle?
+# age = int(input("Input a dog's in human years:"))
 
-# Write the code that:
-# 1. Prompts the user to enter the three lengths of a triangle (one at a time):
-#      Enter the lengths of three side of a triangle:
-#      a:
-#      b:
-#      c:
-# 2. Write the code that determines if the triangle is:
-#      equalateral - all three sides are equal in length
-#      scalene - all three sides are unequal in length
-#      isosceles - two sides are the same length
-# 3. Print a message such as:
-#      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
+# if age <= 2: 
+#     dog_age = age * 10
+# else:
+#     dog_age = ((age -2) * 7) + 20
 
-a = int(input("Enter the lengths of three side of a triangle:"))
-b = int(input("Enter the lengths of three side of a triangle:"))
-c = int(input("Enter the lengths of three side of a triangle:"))
+# print (f"Dog is {dog_age} years old")
 
-if a == b == c: 
-    type_of_triangle = "equalatral"
-elif a != b != c: 
-    type_of_triangle = "scalene"
-else: 
-    type_of_triangle = "isosceles"
+# # exercise-04 What kind of Triangle?
+
+# # Write the code that:
+# # 1. Prompts the user to enter the three lengths of a triangle (one at a time):
+# #      Enter the lengths of three side of a triangle:
+# #      a:
+# #      b:
+# #      c:
+# # 2. Write the code that determines if the triangle is:
+# #      equalateral - all three sides are equal in length
+# #      scalene - all three sides are unequal in length
+# #      isosceles - two sides are the same length
+# # 3. Print a message such as:
+# #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
+
+# a = int(input("Enter the lengths of three side of a triangle:"))
+# b = int(input("Enter the lengths of three side of a triangle:"))
+# c = int(input("Enter the lengths of three side of a triangle:"))
+
+# if a == b == c: 
+#     type_of_triangle = "equalatral"
+# elif a != b != c: 
+#     type_of_triangle = "scalene"
+# else: 
+#     type_of_triangle = "isosceles"
     
     
-print(f'A triangle with sides of {a}, {b}, {c} is a {type_of_triangle}')
+# print(f'A triangle with sides of {a}, {b}, {c} is a {type_of_triangle}')
 
 
-# exercise-05 Fibonacci sequence for first 50 terms
+# # exercise-05 Fibonacci sequence for first 50 terms
 
-# Write the code that:
-# 1. Calculates and prints the first 50 terms of the fibonacci sequence.
-# 2. Print each term and number as follows:
-#      term: 0 / number: 0
-#      term: 1 / number: 1
-#      term: 2 / number: 1
-#      term: 3 / number: 2
-#      term: 4 / number: 3
-#      term: 5 / number: 5
-#      etc.
-# Hint: The next number is found by adding the two numbers before it
+# # Write the code that:
+# # 1. Calculates and prints the first 50 terms of the fibonacci sequence.
+# # 2. Print each term and number as follows:
+# #      term: 0 / number: 0
+# #      term: 1 / number: 1
+# #      term: 2 / number: 1
+# #      term: 3 / number: 2
+# #      term: 4 / number: 3
+# #      term: 5 / number: 5
+# #      etc.
+# # Hint: The next number is found by adding the two numbers before it
+
+seq = []
+for term in range(50):
+    if term == 0: 
+        num = 0   
+    elif term <=2:
+        num = 1    
+    else: 
+        num = seq[term-1] + seq[term-2]
+
+    seq.append(num) 
+    print (f'term: {term} / number: {seq[term]}')
 
 
 
