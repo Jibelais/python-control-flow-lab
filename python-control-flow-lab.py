@@ -118,7 +118,6 @@ for term in range(50):
         num = 1    
     else: 
         num = seq[term-1] + seq[term-2]
-
     seq.append(num) 
     print (f'term: {term} / number: {seq[term]}')
 
@@ -145,13 +144,13 @@ for term in range(50):
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
 
-range_1 = list(range(21, 32))
-range_2 = list(range(1, 21))
+range_1 = range(21, 32)
+range_2 = range(1, 21)
 
 month = input("Enter the month of the season (Jan - Dec):")
 day = int(input("Enter the day of the month (1-31):"))
 
-if month in ("Jan", "Feb") or (month == 'Dec' and day in range_1) or (month == 'Mar' and day in (list(range(1, 20)))):
+if month in ("Jan", "Feb") or (month == 'Dec' and day in range_1) or (month == 'Mar' and day in range(1, 20)):
     season = "Winter"
 if month in ("Apr", "May") or (month == 'Mar' and day in range_1) or (month == 'Jun' and day in range_2):
     season = "Spring"
