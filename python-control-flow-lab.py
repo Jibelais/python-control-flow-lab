@@ -38,7 +38,7 @@ else:
 
 phrase = ''
 while phrase != 'quit':
-    phrase = input('Please enter a word or phrase:')
+    phrase = input('Please enter a word or phrase ("quit" to stop):')
     print(f'what you entered is {len(phrase)} characters long')
     if phrase == 'quit':
         print ("quiting...")
@@ -144,6 +144,9 @@ for term in range(50):
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
 
+
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+days = range (1, 32)
 range_1 = range(21, 32)
 range_2 = range(1, 21)
 
@@ -152,12 +155,15 @@ day = int(input("Enter the day of the month (1-31):"))
 
 if month in ("Jan", "Feb") or (month == 'Dec' and day in range_1) or (month == 'Mar' and day in range(1, 20)):
     season = "Winter"
-if month in ("Apr", "May") or (month == 'Mar' and day in range_1) or (month == 'Jun' and day in range_2):
+elif month in ("Apr", "May") or (month == 'Mar' and day in range_1) or (month == 'Jun' and day in range_2):
     season = "Spring"
-if month in ("Jul", "Aug") or (month == 'Jun' and day in range_1) or (month == 'Jun' and day in range_2):
+elif month in ("Jul", "Aug") or (month == 'Jun' and day in range_1) or (month == 'Jun' and day in range_2):
     season = "Summer"
-if month in ("Oct", "Nov") or (month == 'Sep' and day in range_1) or (month == '' and day in range_2):
+elif month in ("Oct", "Nov") or (month == 'Sep' and day in range_1) or (month == '' and day in range_2):
     season = "Fall"
 
-print (f'{month}/{day} is in {season}')
+if month not in months or day not in days: 
+    print('Invalid month/day')
+else:
+    print (f'{month}/{day} is in {season}')
 
